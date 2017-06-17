@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="import" href="/bower_components/import-tinymce/import-tinymce.html">
+  <link rel="import" href="/bower_components/polymer/polymer-element.html">
+</head>
+<body>
+  <dom-bind>
+    <textarea id="editor" style="width: 100%;"></textarea>
+    <script>
+      window.Editor = (function(document, tinymce) {
+
+        const editor = {};
+
+        editor.init = function (options) {
+          this.options = options;
+          tinymce.init(options);
+        };
+
+        editor.remove = function (selector) {
+          tinymce.remove(selector);
+        }
+
+        editor.getContent = function() {
+          return tinymce.activeEditor.getContent();
+        };
+
+        editor.setContent = function(content) {
+          console.log(content);
+          tinymce.activeEditor.setContent(content);
+        }
+
+        return editor;
+      })(document, tinymce);
+  </script>
+  </dom-bind>
+</body>
+</html>
