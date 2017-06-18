@@ -43,7 +43,7 @@ Example:
         height: var(--editor-min-height);
       }
     </style>
-    <iframe id="editor" src="[[bowserPath]]/editor/editor.html" class="te" on-load="_iFrameReady"></iframe>
+    <iframe id="editor" src="[[bowerPath]]/editor/editor.html" class="te" on-load="_iFrameReady"></iframe>
   </template>
 </dom-module>
 
@@ -58,9 +58,9 @@ Example:
       /**
        * The path for polymer-mce in the bower_component directory
        */
-      bowserPath: {
+      bowerPath: {
         type: String,
-        value: ""
+        value: "/bower_component/polymer-mce"
       },
 
       /**
