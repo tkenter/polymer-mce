@@ -25,10 +25,13 @@
           return tinymce.activeEditor.getContent();
         };
 
-        editor.setContent = function(content) {
-          console.log(content);
+        editor.setContent = function (content) {
           tinymce.activeEditor.setContent(content);
-        }
+        };
+
+        editor.setBaseUrl = function (baseUrl) {
+          tinymce.baseUrl = baseUrl;
+        };
 
         return editor;
       })(document, tinymce);

@@ -209,11 +209,8 @@ Example:
 
       this.addEventListener('tiny-init', e => {
         this.setContent(this._value || "");
+        this.setBaseUrl(this.baseUrl || "");
       });
-
-      if (this.baseUrl !== '') {
-        tinymce.baseURL = this.baseUrl;
-      }
 
       var setup = function (ed) {
         ed.on('init', function(args) {
