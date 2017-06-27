@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="import" href="/bower_components/import-tinymce/import-tinymce.html">
-  <link rel="import" href="/bower_components/polymer/polymer-element.html">
+  <script src="/bower_components/tinymce/tinymce.min.js"></script>
 </head>
 <body>
-  <dom-bind>
     <textarea id="editor" style="width: 100%;"></textarea>
     <script>
       window.Editor = (function(document, tinymce) {
@@ -36,6 +34,5 @@
         return editor;
       })(document, tinymce);
   </script>
-  </dom-bind>
 </body>
 </html>
