@@ -4,11 +4,11 @@
   "version": "0.4.0",
   "main": "polymer-mce.html",
   "dependencies": {
-    "polymer": "Polymer/polymer#^2.4",
-    "import-tinymce": "^1.0.0"
+    "polymer": "Polymer/polymer#^2",
+    "import-tinymce": "^4.8.3"
   },
   "resolutions": {
     "polymer": "^2.0.0",
-    "webcomponentsjs": "^v1.0.0"
+    "webcomponentsjs": "^v1.1.0"
   }
 }
