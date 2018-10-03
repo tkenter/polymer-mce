@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="/bower_components/tinymce/tinymce.min.js"></script>
+  <script src="../../../bower_components/tinymce/tinymce.min.js"></script>
 </head>
 <body>
     <textarea id="editor" style="width: 100%;"></textarea>
@@ -11,6 +11,23 @@
         const editor = {};
 
         editor.init = function (options) {
+          
+          // FIXME: for some reason tinymce is not initalized correctly when options.plugins is filled in polymer-mce with the value of the tinyplugins attribute
+          options.plugins = ["advlist autolink lists link image charmap preview anchor fullscreen media textpattern paste"];
+          options.textpattern_patterns = [
+            {start: '*', end: '*', format: 'italic'},
+            {start: '**', end: '**', format: 'bold'},
+            {start: '#', format: 'h1'},
+            {start: '##', format: 'h2'},
+            {start: '###', format: 'h3'},
+            {start: '####', format: 'h4'},
+            {start: '#####', format: 'h5'},
+            {start: '######', format: 'h6'},
+            {start: '1. ', cmd: 'InsertOrderedList'},
+            {start: '* ', cmd: 'InsertUnorderedList'},
+            {start: '- ', cmd: 'InsertUnorderedList'}
+          ];
+          
           this.options = options;
           tinymce.init(options);
         };
