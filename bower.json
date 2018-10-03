@@ -6,9 +6,5 @@
   "dependencies": {
     "polymer": "Polymer/polymer#^2",
     "import-tinymce": "https://github.com/tinymce/tinymce-dist.git#^4.8.3"
-  },
-  "resolutions": {
-    "polymer": "^2.0.0",
-    "webcomponentsjs": "^v1.1.0"
   }
 }
