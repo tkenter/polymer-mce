@@ -5,7 +5,7 @@
   "main": "polymer-mce.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^2",
-    "import-tinymce": "^4.8.3"
+    "import-tinymce": "#^4.8.3"
   },
   "resolutions": {
     "polymer": "^2.0.0",
