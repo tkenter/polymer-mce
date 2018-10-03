@@ -31,17 +31,17 @@ Example:
   <template>
     <style>
       :host {
-        --editor-min-height: 300px;
+        --editor-min-height: 500px;
 
         display: block;
-        min-height: var(--editor-min-height); 
+        min-height: var(--editor-min-height);
       }
 
       #editor {
         border: none;
         width: 100%;
         height: var(--editor-min-height);
-        resize: vertical;
+        /* resize: vertical; */
         overflow: auto;
       }
     </style>
